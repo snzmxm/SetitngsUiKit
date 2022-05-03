@@ -50,12 +50,12 @@ class SettingsTableViewCell: UITableViewCell {
 
         let numLabel = UILabel()
         numLabel.text = "1"
-        numLabel.font = .systemFont(ofSize: 20)
+        numLabel.font = .systemFont(ofSize: Metric.size20)
         numLabel.textAlignment = .center
         numLabel.textColor = .white
         numLabel.backgroundColor = .red
         numLabel.layer.masksToBounds = true
-        numLabel.layer.cornerRadius = 10
+        numLabel.layer.cornerRadius = Metric.size10
         numLabel.adjustsFontSizeToFitWidth = true
 
         return numLabel
@@ -101,10 +101,10 @@ class SettingsTableViewCell: UITableViewCell {
         }
         if model.title == "Основные" {
             contentView.addSubview(numLabel)
-            numLabel.frame = CGRect(x: (contentView.frame.size.width - contentView.frame.size.width * 0.1),
-                                    y: (contentView.frame.size.height / 4),
-                                    width: 21,
-                                    height: 21)
+            numLabel.frame = CGRect(x: (contentView.frame.size.width - contentView.frame.size.width * Metric.size0_1),
+                                    y: (contentView.frame.size.height / Metric.size4),
+                                    width: Metric.size21,
+                                    height: Metric.size21)
         }
     }
 
@@ -134,14 +134,19 @@ extension SettingsTableViewCell {
     //Размеры
     enum Metric {
         static let size0: CGFloat = 0
+        static let size0_1: CGFloat = 0.1
         static let size1 = 1
         static let size1_6: CGFloat = 1.6
         static let size1_9: CGFloat = 1.9
         static let size2: CGFloat = 2
+        static let size4: CGFloat = 4
         static let size6: CGFloat = 6
         static let size7: CGFloat = 7
         static let size8: CGFloat = 8
+        static let size10: CGFloat = 10
         static let size15: CGFloat = 15
+        static let size20: CGFloat = 20
+        static let size21: CGFloat = 21
         static let size25: CGFloat = 25
     }
     
